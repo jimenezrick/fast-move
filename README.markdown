@@ -11,7 +11,7 @@ It should run in any modern UNIX-like with minimal effort. You just need to have
 Internally the file system hierarchy is represented in a N-ary tree in which each node represents a file and its associated information. Additionally a double-linked list is used to represent the lines from screen. The `glib` is used for its N-ary trees and double-linked lists. Also some string manipulation functions are used for commodity. The rest is standard POSIX code.
 
 ### Screenshot
-![fm screenshot](http://github.com/jimenezrick/fast-move/raw/master/fm-screenshot.png)
+![fm screenshot](http://cloud.github.com/downloads/jimenezrick/fast-move/fm-screenshot.png)
 
 ### Invocation
 		Usage: fm [-h|-d] [<tree_root>]
