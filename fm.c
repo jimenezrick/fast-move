@@ -86,9 +86,9 @@ void unset_sighandlers(void)
 
 void print_usage(void)
 {
-	printf("Usage: %s [-h|-d] [<tree_root>]\n", program_name);
-	printf("The root of the displayed tree is `tree_root'.\n");
-	printf("\t-h: show this help\n\t-d: print on stderr inotify events debug info\n");
+	printf("Usage: %s [-h|-d] [<dir>]\n", program_name);
+	printf("\t-h: show this help\n");
+	printf("\t-d: print on stderr inotify events debug info\n");
 }
 
 int main(int argc, char *argv[])
