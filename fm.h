@@ -12,7 +12,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */ 
+ */
 
 #ifndef FM_H
 #define FM_H
@@ -49,8 +49,8 @@
 #define DEFAULT_EDITOR "vim"
 #define DEFAULT_PAGER "less"
 #define DEFAULT_SHELL "bash"
-#define DEFAULT_PS_VIEWER "gv"
-#define DEFAULT_PDF_VIEWER "xpdf"
+#define DEFAULT_PS_VIEWER "evince"
+#define DEFAULT_PDF_VIEWER "evince"
 #define DEFAULT_IMAGE_VIEWER "display"
 #define GETCH_DELAY 5
 

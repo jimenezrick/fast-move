@@ -12,7 +12,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */ 
+ */
 
 #include "fm.h"
 
@@ -88,7 +88,8 @@ void print_usage(void)
 {
 	printf("Usage: %s [-h|-d] [<dir>]\n", program_name);
 	printf("\t-h: show this help\n");
-	printf("\t-d: print on stderr inotify events debug info\n");
+	printf("\t-d: print on stderr inotify events debug info\n\n");
+	printf("Report bugs to <jimenezrick@gmail.com>\n");
 }
 
 int main(int argc, char *argv[])
