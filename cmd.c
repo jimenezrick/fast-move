@@ -99,10 +99,12 @@ void get_key(void)
 			scroll_tree(command_repetitions * -getmaxy(tree_window) / 2);
 			select_nth_line(command_repetitions * -getmaxy(tree_window) / 2);
 			break;
+		case KEY_HOME:
 		case 'g':
 			if (previous_key == 'g')
 				select_line(lines);
 			break;
+		case KEY_END:
 		case 'G':
 			select_line(g_list_last(lines));
 			break;
