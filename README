@@ -49,20 +49,20 @@ Most commands are based in text navigation of Vim.
 
 Moving the cursor:
 
-	j:		select next file
-	k:		select previous file
-	l:		open selected directory (open the directory twice to
-			show dot files)
-	h:		close current/selected directory
-	Ctrl + f:	move one page forward the cursor
-	Ctrl + b:	move one page backward the cursor
-	Ctrl + d:	move half page forward the cursor
-	Ctrl + u:	move half page backward the cursor
-	gg:		select first file
-	G:		select last file
-	zz:		center selected file on screen
-	H:		select first line from screen
-	L:		select last line from screen
+	j:		selects next file
+	k:		selects previous file
+	l:		opens selected directory (open the directory twice to
+			shows dot files)
+	h:		closes current/selected directory
+	Ctrl + f:	moves one page forward the cursor
+	Ctrl + b:	moves one page backward the cursor
+	Ctrl + d:	moves half page forward the cursor
+	Ctrl + u:	moves half page backward the cursor
+	gg:		selects first file
+	G:		selects last file
+	zz:		centers selected file on screen
+	H:		selects first line from screen
+	L:		selects last line from screen
 	}:		selects next file without going deeper in the hierarchy
 	{:		selects previous file without going deeper in the hierarchy
 	[[:		selects parent directory
@@ -82,7 +82,7 @@ Miscellanea:
 	Ctrl + l:	redraws the entire screen and reloads the content
 			of the current working directory
 	Ctrl + g:	prints info from the selected like ls -l
-	Esc:		clear info window Set command repetitions to one
+	Esc:		clears info window and sets command repetitions to one
 
 The default choices for the external programs are
 vim/evince/display/less/bash. They are configured from fm.h. Also the
@@ -102,7 +102,7 @@ Version 1.1 finished, Linux inotify support added.
  License
 ---------
 
-The program is under the GPLv3.
+This program is under the GPLv3.
 
 
  Feedback
