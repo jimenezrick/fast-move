@@ -83,7 +83,7 @@ void print_lines(GList *start_line, GList *end_line, gboolean clear_bottom_lines
 
 	if (end_line == NULL)
 		end_line = last_line;
-	else if (start_line != NULL) {
+	if (start_line != NULL) {
 		for (line_ptr = start_line;
 				g_list_position(first_line, line_ptr) < getmaxy(tree_window);
 				line_ptr = g_list_next(line_ptr)) {
