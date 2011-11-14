@@ -182,6 +182,7 @@ gboolean remove_from_tree(GNode *file, gboolean unmount)
 	int position = g_list_position(lines, FILE(file)->line);
 	gboolean refresh_needed = FALSE;
 	GList *line_ptr, *line_ptr2;
+	GNode *dir_ptr;
 
 	if (G_NODE_IS_ROOT(file)) {
 		endwin();
@@ -196,6 +197,18 @@ gboolean remove_from_tree(GNode *file, gboolean unmount)
 		destroy_directory_content_real(file, FALSE);
 		if (unmount)
 			return TRUE;
+	} else if (FILE(file)->type == file_type) {
+		for (dir_ptr = file->parent; !G_NODE_IS_ROOT(dir_ptr);
+				dir_ptr = dir_ptr->parent) {
+			if (FILE(dir_ptr)->open == FALSE) {
+				g_node_unlink(file);
+				return FALSE;
+			}
+		}
+		if (FILE(dir_ptr)->open == FALSE) {
+			g_node_unlink(file);
+			return FALSE;
+		}
 	}
 	g_node_unlink(file);
 
