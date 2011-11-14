@@ -51,7 +51,7 @@
 #define DEFAULT_SHELL "bash"
 #define DEFAULT_PS_VIEWER "evince"
 #define DEFAULT_PDF_VIEWER "evince"
-#define DEFAULT_IMAGE_VIEWER "display"
+#define DEFAULT_IMAGE_VIEWER "feh"
 #define GETCH_DELAY 5
 
 typedef struct File File;
