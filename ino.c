@@ -124,7 +124,7 @@ again2:		if ((n = read(inotify_descriptor, events_buffer, BUFFER_LENGTH)) > 0) {
 
 gboolean insert_in_tree(GNode *directory, File *file)
 {
-	GNode *new_file, *file_ptr;
+	GNode *new_file, *file_ptr, *dir_ptr;
 	int position;
 
 	if (file->name[0] == '.' && FILE(directory)->show_dotfiles == FALSE) {
@@ -132,7 +132,15 @@ gboolean insert_in_tree(GNode *directory, File *file)
 
 		return FALSE;
 	}
+
 	new_file = insert_sorted_in_tree(directory, file);
+	for (dir_ptr = directory; !G_NODE_IS_ROOT(dir_ptr); dir_ptr = dir_ptr->parent) {
+		if (FILE(dir_ptr)->open == FALSE)
+			return FALSE;
+	}
+	if (FILE(dir_ptr)->open == FALSE)
+		return FALSE;
+
 	file_ptr = get_previous_file(new_file);
 	position = g_list_position(lines, FILE(file_ptr)->line);
 	lines = g_list_insert(lines, new_file, position + 1);

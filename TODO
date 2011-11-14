@@ -1,3 +1,0 @@
-- When monitoring a directory with Inotify, sometimes the UI becomes
-  garbled when new files are created there.
-- Use xdg-open to open the desired file with the user prefered application.
