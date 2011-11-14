@@ -28,12 +28,6 @@ Also some string manipulation functions are used for commodity. The rest
 is standard POSIX code.
 
 
- Screenshot
-------------
-
-Look at the included file screenshot.png.
-
-
  Invocation
 ------------
 
