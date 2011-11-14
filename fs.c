@@ -46,13 +46,13 @@ File *create_new_file(char *name, char *path, gboolean exit_on_error)
 		if (exit_on_error)
 			PRINT_ERRNO_AND_EXIT();
 		else {
-			/* Sometimes a file is created and then removed, this under Linux
+			/*
+			 * Sometimes a file is created and then removed, this under Linux
 			 * inotify events can create confusion because we try to stat a
 			 * file that no longer exists. The file is removed before we can do
 			 * the stat. So we ignore the errno and return NULL to take account
-			 * of it. */
-
-			/* PRINT_ERRNO_INFO(); */
+			 * of it.
+			 */
 			free(file_path);
 			free(file);
 
