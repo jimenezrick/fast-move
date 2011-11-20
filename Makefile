@@ -20,10 +20,10 @@ tags: ${SOURCES} ${HEADERS}
 	ctags ${SOURCES} ${HEADERS}
 
 install: all
-	install -D -m 755 -o root -g root ${BINARY} ${DESTDIR}${PREFIX}/bin/${BINARY}
+	install -D -m 755 -o root -g root ${BINARY} ${DESTDIR}${PREFIX}/bin
 
 uninstall:
-	rm -f ${PREFIX}/bin/${BINARY}
+	rm -f ${DESTDIR}${PREFIX}/bin/${BINARY}
 
 clean:
 	rm -f ${BINARY} *.o tags
